@@ -9,7 +9,9 @@ import cors from 'cors'
 
 const app= express()
 
-app.use(cors())
+app.use(cors({
+    origin:['htpps://localhost:5173','https://frontend-pink-chi-16.vercel.app/']
+}))
 
 app.use(express.json())
 app.use(cookieParser())

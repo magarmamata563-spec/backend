@@ -13,32 +13,35 @@ console.log("DATABASE connected successfully");
     // console.log(users)
     
 
-    const password = bcrypt.hashSync("passsword", 10)
-    const userExist = await user.findOne({role:'ADMIN'})
+    // const password = bcrypt.hashSync("passsword", 10)
+    // const userExist = await user.findOne({role:'ADMIN'})
   
-    if(userExist){
+//     if(userExist){
         
-        console.log("Admin already exists",userExist)
+//         console.log("Admin already exists",userExist)
 
-    }else{
+//     }else{
      
-        await user.create({
-            fullname: "admin",
-            password : password,
-            email : "admin@gmail.com",
-            role : 'ADMIN'
-        })
+//         await user.create({
+//             fullname: "admin",
+//             password : password,
+//             email : "admin@gmail.com",
+//             role : 'ADMIN'
+//         })
 
-        console.log("admin seeded successfully")
-    }  
+//         console.log("admin seeded successfully")
+//     }  
 
+// }
 }
+
 catch(error){
     console.log("database connection failed",error);
 }
 
 
 }
+
 
 
 export default connectdb;
